@@ -6,6 +6,12 @@ threadsafe: yes
 
 handlers:
 
+- url: /android_register
+  script: Android_Register.app
+
+- url: /android_login
+  script: Android_Login.app
+
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
