@@ -15,8 +15,7 @@ class Android_Register(blobstore_handlers.BlobstoreUploadHandler):
             dictPassed = {"newUser":"0"}
         else:
             dictPassed = {"newUser":"1"}
-            newUser = User(fullname=newUser_fullname, email=User_email, password=newUser_password)
-            # newUser.head_portrait = ""
+            newUser = User(identity=newUser_fullname, email=User_email, password=newUser_password)
             newUser.put()
 
         jsonObj = json.dumps(dictPassed, sort_keys=True, indent=4, separators=(',', ': '))
